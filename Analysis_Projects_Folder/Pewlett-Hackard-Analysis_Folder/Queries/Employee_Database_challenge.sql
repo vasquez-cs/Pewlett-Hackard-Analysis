@@ -21,12 +21,12 @@ ORDER BY emp_no, to_date DESC;
 
 -- Created the search query first to match listed image from challenge instructions
 -- Grouped by title and ordered by the count ("Retiring Titles")
-Select count(title) AS "Retiring Titles", title 
+Select count(title) AS "Retiring Titles Count", title 
 -- Once original SQL query created, I then inserted the "INTO" to create a new table
 INTO retiring_titles
 FROM unique_titles
 GROUP BY title 
-ORDER BY "Retiring Titles" DESC;
+ORDER BY "Retiring Titles Count" DESC;
 
 -- Inspiration to join 3 tables came from: https://kb.objectrocket.com/postgresql/join-three-tables-in-postgresql-539
 -- First Created the search query first to include all conditions
